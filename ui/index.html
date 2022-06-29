@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BZ Online IDE</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- <h1 id="test"></h1> -->
+    <div class="header">BZ Online IDE</div>
+    <div class="control-panel">
+        Editor Mode:
+
+        <select id="mode" class="mode" onchange="changetheme()">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option></select>
+        Select Language:
+
+        <select id="languages" class="languages" onchange="changeLanguage()">
+            <option value="c"> C </option>
+            <option value="cpp"> C++ </option>
+            <option value="python"> Python </option>
+            <!-- <option value="php"> PHP </option>
+            <option value="node"> Node JS </option> -->
+        </select>
+    </div>
+    <div class="editor" id="editor"></div>
+
+    <div class="button-container">
+        <button class="btn" onclick="executeCode()"> Run </button>
+    </div><br>
+
+    <p class="inp">Input</p>
+    <div className="col-md-6">
+            <textarea  name="text" id="idata"></textarea>
+    </div>
+
+    <p class="opt">Output</p>
+    <!-- <input id="f1"> -->
+    <div className="col-md-6">
+    <textarea id="f1"></textarea>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/lib/ace.js"></script>
+    <script src="js/lib/theme-ambiance.js"></script>
+    <script src="js/ide.js"></script>
+    
+</body>
+</html>
