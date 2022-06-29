@@ -69,4 +69,6 @@
 
     unlink($filePath);
     unlink($inputPath);
+    if($language == "python"){
     unlink($random . ".exe");
+    }
